@@ -24,6 +24,7 @@ body {
     top: 0;
     background-color: white;
     z-index: 1;
+
 }
 
 
@@ -60,6 +61,10 @@ body {
 .navbar__s3 {
     display: flex;
     gap: 10px;
+}
+
+.navbar__s4{
+    display: none;
 }
 
 /* My learning Popup*/
@@ -161,7 +166,9 @@ body {
 }
 
 .course-card {
-    width: 250px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 
 }
 
@@ -223,4 +230,36 @@ body {
     align-items: center;
     display: flex;
     justify-content: space-between;
+}
+
+
+
+
+
+/* Media Quries */
+
+@media screen and (max-width:800px) {
+
+     body{
+        font-size: 10px;
+     } 
+}
+
+@media screen and (max-width:600px) {
+
+    .course-card{
+        flex-basis: 40%;
+    }
+
+    .categories{
+        display: none;
+    }
+    .navbar__s2,.navbar__s3{
+        display: none;
+    }
+
+    .navbar__s4{
+        display: block;
+    }
+    
 }
